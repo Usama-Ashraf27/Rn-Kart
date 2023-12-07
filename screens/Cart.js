@@ -9,7 +9,7 @@ const Cart = ({navigation}) => {
   const [cartItems, setCartItems] = useState(CartData);
   
   return (
-    <Layout>
+    <Layout> 
       <Text
         style={[
           styles.heading,

@@ -43,7 +43,7 @@ useEffect(()=>{
     dispatch({type:'clearError'})}
     if(message){
       alert(message);
-      dispatch({type:'clearMessage'})
+      dispatch({type:'clearMessage'})   
       navigation.navigate("Home");
     }
   
