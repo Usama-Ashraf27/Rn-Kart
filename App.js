@@ -31,7 +31,7 @@ export default function App() {
           component={Home}
           options={{ headerShown: false }}
         />
-        <Stack.Screen
+        <Stack.Screen 
           name="login"
           component={Login}
           options={{ headerShown: false }}
