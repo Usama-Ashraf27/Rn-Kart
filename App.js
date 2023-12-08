@@ -19,7 +19,7 @@ import Dashboard from "./screens/Admin/Dashboard";
 import { useSelector, useDispatch } from "react-redux";
 import store from "./redux/store";
 
-export default function App() {
+export default function App() { 
   const Stack = createNativeStackNavigator();
   return (
     <Provider store={store}>
