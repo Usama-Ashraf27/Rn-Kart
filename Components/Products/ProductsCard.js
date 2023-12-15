@@ -1,22 +1,20 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import React from "react";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-const ProductsCard = ({ p }) => {
+const ProductsCard = ({ p, index }) => {
   const navigation = useNavigation();
 
-  //more detaisl btn
   const handleMoreButton = (id) => {
     navigation.navigate("productDetails", { _id: id });
-    // console.log(id);
   };
 
-  //ADD TO CART
   const handleAddToCart = () => {
-    alert("added to cart");
+    alert("Added to cart");
   };
+
   return (
-    <View>
+    <View style={styles.cardContainer}>
       <View style={styles.card}>
         <Image style={styles.cardImage} source={{ uri: p?.imageUrl }} />
         <Text style={styles.cardTitle}>{p?.name}</Text>
@@ -40,12 +38,14 @@ const ProductsCard = ({ p }) => {
 };
 
 const styles = StyleSheet.create({
+  cardContainer: {
+    width: "48%", // Adjust the width to leave some space between cards
+    marginBottom: 10,
+  },
   card: {
     borderWidth: 1,
     borderColor: "lightgray",
-    marginVertical: 5,
-    marginHorizontal: 8,
-    width: "45%",
+    width: "100%",
     padding: 10,
     backgroundColor: "#ffffff",
     justifyContent: "center",
@@ -73,14 +73,14 @@ const styles = StyleSheet.create({
   btn: {
     backgroundColor: "#000000",
     height: 20,
-    width: 75,
+    width: "45%",
     borderRadius: 5,
     justifyContent: "center",
   },
   btnCart: {
     backgroundColor: "orange",
     height: 20,
-    width: 75,
+    width: "45%",
     borderRadius: 5,
     justifyContent: "center",
   },
@@ -90,7 +90,6 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontWeight: "bold",
   },
-
 });
 
-export default ProductsCard;
+export default ProductsCard

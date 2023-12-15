@@ -3,7 +3,7 @@ import { userReducer } from "./features/auth/userReducer";
 
 export default configureStore({
   reducer: {
-    user: userReducer,
+    user: userReducer, 
   },
 });
 

@@ -18,7 +18,7 @@ const Footer = () => {
         <Text style={[styles.iconText, route.name === "home" && styles.active]}>
           Home
         </Text>
-      </TouchableOpacity>  
+      </TouchableOpacity>
       <TouchableOpacity
         style={styles.menuContainer}
         onPress={() => navigation.navigate("Cart")}
@@ -33,19 +33,22 @@ const Footer = () => {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.menuContainer}
-        onPress={() => navigation.navigate("notifications")}
+        onPress={() => navigation.navigate("TrendingProduct")}
       >
         <AntDesign
-          style={[styles.icon, route.name === "notifications" && styles.active]}
-          name="bells"
+          style={[
+            styles.icon,
+            route.name === "TrendingProduct" && styles.active,
+          ]}
+          name="antdesign"
         />
         <Text
           style={[
             styles.iconText,
-            route.name === "notifications" && styles.active,
+            route.name === "TrendingProduct" && styles.active,
           ]}
         >
-          notification
+          Trending
         </Text>
       </TouchableOpacity>
       <TouchableOpacity
@@ -62,8 +65,6 @@ const Footer = () => {
           Account
         </Text>
       </TouchableOpacity>
-    
-      
     </View>
   );
 };

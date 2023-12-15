@@ -2,16 +2,18 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import Layout from "../../Components/Layout/Layout";
 import AntDesign from "react-native-vector-icons/AntDesign";
+import { useRoute, useNavigation } from "@react-navigation/native";
 
 const Dashboard = () => {
+  const navigation = useNavigation();
   return (
     <Layout>
       <View style={styles.main}>
         <Text style={styles.heading}>Dashboard</Text>
         <View style={styles.btnContainer}>
-          <TouchableOpacity style={styles.btn}>
+          <TouchableOpacity style={styles.btn} onPress={()=>navigation.navigate("CreateProduct")}>
             <AntDesign style={styles.icon} name="edit" />
-            <Text style={styles.btnText}>Manage Products</Text>
+            <Text style={styles.btnText}>Create Products</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.btn}>
             <AntDesign style={styles.icon} name="edit" />
@@ -19,13 +21,13 @@ const Dashboard = () => {
           </TouchableOpacity>
           <TouchableOpacity style={styles.btn}>
             <AntDesign style={styles.icon} name="user" />
-            <Text style={styles.btnText}>Manage Users</Text>
+            <Text style={styles.btnText}>Manage Products</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.btn}>
             <AntDesign style={styles.icon} name="bars" />
             <Text style={styles.btnText}>Manage Orders</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btn}>
+          <TouchableOpacity style={styles.btn} onPress={()=>navigation.navigate("about")}>
             <AntDesign style={styles.icon} name="info" />
             <Text style={styles.btnText}>About App</Text>
           </TouchableOpacity>
