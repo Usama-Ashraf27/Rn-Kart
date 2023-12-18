@@ -11,10 +11,8 @@ const About = () => {
       />
       <Text style={styles.title}>About Us</Text>
       <Text style={styles.description}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+        
+An E-commerce application is a digital platform that facilitates online buying and selling of goods and services. It brings together buyers and sellers in a virtual marketplace, providing a convenient and efficient way to conduct commercial transactions over the internet.
       </Text>
     </ScrollView>
   );
@@ -24,7 +22,7 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     alignItems: "center",
-    
+    marginTop:'15%'
    
   },
   image: {

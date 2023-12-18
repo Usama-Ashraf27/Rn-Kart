@@ -27,27 +27,27 @@ const Login = ({ navigation }) => {
 
   // Handle login logic here
   const handleLogin = () => {
-    if (!email || !password) {
-      return alert("Please enter your email address and password here ");
-    }
-    dispatch(login(email, password));
+    // if (!email || !password) {
+    //   return alert("Please enter your email address and password here ");
+    // }
+    // dispatch(login(email, password));
    
 
     // alert("Login successful");
-    // navigation.navigate("Home");
+    navigation.navigate("Home");
   };
 //life Cycle
-useEffect(()=>{
-  if(error){
-    alert(error);
-    dispatch({type:'clearError'})}
-    if(message){
-      alert(message);
-      dispatch({type:'clearMessage'})   
-      navigation.navigate("Home");
-    }
+// useEffect(()=>{
+//   if(error){
+//     alert(error);
+//     dispatch({type:'clearError'})}
+//     if(message){
+//       alert(message);
+//       dispatch({type:'clearMessage'})   
+//       navigation.navigate("Home");
+//     }
   
-},[error, message,dispatch]);
+// },[error, message,dispatch]);
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>

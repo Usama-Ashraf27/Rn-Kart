@@ -19,6 +19,7 @@ import Dashboard from "./screens/Admin/Dashboard";
 import { useSelector, useDispatch } from "react-redux";
 import store from "./redux/store";
 import CreateProduct from "./screens/Admin/CreateProduct";
+import TrendingDetails from "./screens/TrendingDetails";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -26,7 +27,7 @@ export default function App() {
     <Provider store={store}>
       <NavigationContainer>
         {/* initialRouteName="login" */}
-        <Stack.Navigator initialRouteName="home">
+        <Stack.Navigator initialRouteName="login">
           <Stack.Screen
             name="Home"
             component={Home}
@@ -49,6 +50,7 @@ export default function App() {
           <Stack.Screen name="adminPanel" component={Dashboard} />
           <Stack.Screen name="about" component={About} />
           <Stack.Screen name="productDetails" component={ProductDetails} />
+          <Stack.Screen name="TrendingDetails" component={TrendingDetails} />
           <Stack.Screen name="Cart" component={Cart} />
           <Stack.Screen name="checkout" component={Checkout} />
           <Stack.Screen name="payment" component={Payment} />
